@@ -20,11 +20,10 @@ title                    : "딥상어동의 딥한 생각"
 title_separator          : "-"
 subtitle                 : # site tagline that appears below site title in masthead
 name                     : "딥상어동의 딥한 생각"
-description              : "Nexon Korea Data Analyst  
+description              : "심리학을 전공했지만 사람은 잘 모름  입이 잘 안다물어짐 그래서 딥상어동
+  
 
-
-                            심리학을 전공했지만 사람은 잘 모름  
-                            입이 잘 안다물어짐 그래서 딥상어동"  
+                            Nexon Korea Data Analyst"  
 url                      : <https://giblesdeepmind.com/blog/deeplog>
 baseurl                  : # the subpath of your site, e.g. "/blog"
 repository               : # GitHub username/repo-name e.g. "mmistakes/minimal-mistakes"
@@ -99,9 +98,10 @@ analytics:
 author:
   name             : "딥상어동의 딥한 생각"
   avatar           : "/assets/images/testimages/mymy.jpg"
-  bio              : "Nexon Korea Data Analyst  
+  bio              : "심리학을 전공했지만 사람은 잘 모름  입이 잘 안다물어짐 그래서 딥상어동
+  
 
-  심리학을 전공했지만 사람은 잘 모름  입이 잘 안다물어짐 그래서 딥상어동"  
+                      Nexon Korea Data Analyst"  
   location         : "유럽여행또가고싶다"
   email            :
   links:
