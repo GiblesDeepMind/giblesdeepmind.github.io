@@ -60,8 +60,9 @@ print(s)
 # ![사진 제목](사진 주소 - git repository에 넣으면 편함){: .align-center} 정렬도 가능
 ```
 
-![](./assets/images/testimages/jjanggu.jpg){: .align-center}
+![](https://giblesdeepmind.github.io/assets/images/testimages/jjanggu.jpg){: .align-center}
 
+![screenshot_20171221-151714](https://user-images.githubusercontent.com/23310187/34244435-91eab306-e668-11e7-8063-735dff683bf8.png)
 
 ## 표
 
