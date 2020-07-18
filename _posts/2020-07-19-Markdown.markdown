@@ -58,7 +58,7 @@ print(s)
 # ![사진 제목](사진 주소 - git repository에 넣으면 편함){: .align-center} 정렬도 가능
 ```
 
-![짱구 사진](https://giblesdeepmind.com/assets/images/testimages/jjanggu.jpg){: .align-center}
+![짱구 사진](https://giblesdeepmind.com/assets/images/testimages/jjanggu.jpg "짱구"){: .align-center}
 
 
 ## 표
