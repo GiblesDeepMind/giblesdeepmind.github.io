@@ -28,7 +28,7 @@ description              : "Nexon Korea Data Analyst
 url                      : <https://giblesdeepmind.com/blog/deeplog>
 baseurl                  : # the subpath of your site, e.g. "/blog"
 repository               : # GitHub username/repo-name e.g. "mmistakes/minimal-mistakes"
-teaser                   : "/assets/images/testimages/mymy.jpg"
+teaser                   : # "/assets/images/testimages/mymy.jpg"
 logo                     : # "/assets/images/testimages/mymy.jpg"
 masthead_title           : # overrides the website title displayed in the masthead, use " " for no title
 # breadcrumbs            : false # true, false (default)
@@ -98,7 +98,7 @@ analytics:
 # Site Author
 author:
   name             : "딥상어동의 딥한 생각"
-  avatar           : # "/assets/images/testimages/mymy.jpg"
+  avatar           : "/assets/images/testimages/mymy.jpg"
   bio              : "Nexon Korea Data Analyst  
 
                       심리학을 전공했지만 사람은 잘 모름
