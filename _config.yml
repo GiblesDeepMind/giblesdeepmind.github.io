@@ -21,12 +21,14 @@ title_separator          : "-"
 subtitle                 : # site tagline that appears below site title in masthead
 name                     : "딥상어동의 딥한 생각"
 description              : "Nexon Korea Data Analyst  
+
                             심리학을 전공했지만 사람은 잘 모름
+
                             입이 잘 안다물어짐 그래서 딥상어동"
 url                      : <https://giblesdeepmind.com/blog/deeplog>
 baseurl                  : # the subpath of your site, e.g. "/blog"
 repository               : # GitHub username/repo-name e.g. "mmistakes/minimal-mistakes"
-teaser                   : "/assets/images/testimages/mymy.jpg"
+teaser                   : # "/assets/images/testimages/mymy.jpg"
 logo                     : "/assets/images/testimages/mymy.jpg"
 masthead_title           : # overrides the website title displayed in the masthead, use " " for no title
 # breadcrumbs            : false # true, false (default)
@@ -96,9 +98,11 @@ analytics:
 # Site Author
 author:
   name             : "딥상어동의 딥한 생각"
-  avatar           : "/assets/images/testimages/mymy.jpg"
+  avatar           : # "/assets/images/testimages/mymy.jpg"
   bio              : "Nexon Korea Data Analyst  
+
                       심리학을 전공했지만 사람은 잘 모름
+
                       입이 잘 안다물어짐 그래서 딥상어동"
   location         : "유럽여행또가고싶다"
   email            :
@@ -205,7 +209,7 @@ sass:
 permalink: /:categories/:title/
 paginate: 5 # amount of posts to show
 paginate_path: /page:num/
-timezone: Asis/Seoul # https://en.wikipedia.org/wiki/List_of_tz_database_time_zones
+timezone: Asia/Seoul # https://en.wikipedia.org/wiki/List_of_tz_database_time_zones
 
 
 # Plugins (previously gems:)
