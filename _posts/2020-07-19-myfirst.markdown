@@ -1,8 +1,13 @@
 ---
-layout: post
-title:  "Welcome to Jekyll!"
-date:   2020-07-19 23:34:25 +0900
-categories: jekyll update
+title:  "github.io 블로그 시작하기"
+excerpt: "GitHub Blog 서비스인 github.io 블로그 시작하기로 했다."
+
+categories:
+  - Blog
+tags:
+  - Blog
+last_modified_at: 2020-07-19T00:40:00-05:00
+
 ---
 
 # 나의 첫번째 블로그
