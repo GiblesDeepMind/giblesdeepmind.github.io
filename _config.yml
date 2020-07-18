@@ -28,8 +28,8 @@ description              : "Nexon Korea Data Analyst
 url                      : <https://giblesdeepmind.com/blog/deeplog>
 baseurl                  : # the subpath of your site, e.g. "/blog"
 repository               : # GitHub username/repo-name e.g. "mmistakes/minimal-mistakes"
-teaser                   : # "/assets/images/testimages/mymy.jpg"
-logo                     : "/assets/images/testimages/mymy.jpg"
+teaser                   : "/assets/images/testimages/mymy.jpg"
+logo                     : # "/assets/images/testimages/mymy.jpg"
 masthead_title           : # overrides the website title displayed in the masthead, use " " for no title
 # breadcrumbs            : false # true, false (default)
 words_per_minute         : 200
