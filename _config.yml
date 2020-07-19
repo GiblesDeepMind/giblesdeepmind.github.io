@@ -12,7 +12,7 @@
 
 theme                  : "minimal-mistakes-jekyll"
 # remote_theme           : "mmistakes/minimal-mistakes"
-minimal_mistakes_skin    : "aqua" #"default"  "air", "aqua", "contrast", "dark", "dirt", "neon", "mint", "plum", "sunrise"
+minimal_mistakes_skin    : "air" #"default"  "air", "aqua", "contrast", "dark", "dirt", "neon", "mint", "plum", "sunrise"
 
 # Site Settings
 locale                   : "ko-KR"
@@ -24,8 +24,8 @@ description              : "심리학을 전공했지만 사람은 잘 모름  �
   
 
                             Nexon Korea Data Analyst"  
-                            
-url                      : "https://giblesdeepmind.github.io"
+
+url                      : "https://deeplog.com"
 baseurl                  : #"https://giblesdeepmind.github.io/blog"
 repository               : # GitHub username/repo-name e.g. "mmistakes/minimal-mistakes"
 teaser                   : # "/assets/images/testimages/mymy.jpg"
