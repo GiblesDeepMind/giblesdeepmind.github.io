@@ -32,7 +32,7 @@ url                      : "https://giblesdeepmind.github.io"
 baseurl                  : #"/blog"
 repository               : # GitHub username/repo-name e.g. "mmistakes/minimal-mistakes"
 teaser                   : # "/assets/images/testimages/mymy.jpg"
-logo                     : # "/assets/images/testimages/mymy.jpg"
+logo                     : "/assets/images/testimages/deep.png"
 masthead_title           : # overrides the website title displayed in the masthead, use " " for no title
 # breadcrumbs            : false # true, false (default)
 words_per_minute         : 200
