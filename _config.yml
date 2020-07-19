@@ -21,8 +21,10 @@ title_separator          : "-"
 subtitle                 : # site tagline that appears below site title in masthead
 name                     : "딥상어동의 딥한 생각"
 description              : "심리학을 전공했지만 사람은 잘 모름  
+                            
 
                             딥상어동은 입을 잘 못다물어서 동아리 친구가 지어준 별명
+
 
                             Nexon Korea Data Analyst"  
 url                      : "https://giblesdeepmind.github.io"
@@ -102,7 +104,9 @@ author:
   avatar           : "/assets/images/testimages/mymy.jpg"
   bio              : "심리학을 전공했지만 사람은 잘 모름  
   
+
                       딥상어동은 입을 잘 못다물어서 동아리 친구가 지어준 별명
+
 
                       Nexon Korea Data Analyst"  
   location         : "유럽여행또가고싶다"
