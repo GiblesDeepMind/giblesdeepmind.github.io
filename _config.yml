@@ -24,11 +24,8 @@ description              : "심리학을 전공했지만 사람은 잘 모름  �
   
 
                             Nexon Korea Data Analyst"  
-
 url                      : "https://giblesdeepmind.github.io"
-
 baseurl                  : #"/blog"
-
 repository               : # GitHub username/repo-name e.g. "mmistakes/minimal-mistakes"
 teaser                   : # "/assets/images/testimages/mymy.jpg"
 logo                     : # "/assets/images/testimages/mymy.jpg"
