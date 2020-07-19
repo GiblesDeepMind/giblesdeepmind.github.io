@@ -3,6 +3,9 @@
 title:  "Markdown"
 excerpt: "마크다운사전"
 
+toc: true
+toc_sticky: true
+
 # layout: posts
 date:   2020-07-18 01:21:25 +0900
 categories: 
