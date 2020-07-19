@@ -7,7 +7,7 @@ toc: true
 toc_sticky: # true
 toc_label: "페이지 주요 목차"
 
-classes: wide
+#classes: wide
 
 # layout: posts
 date:   2020-07-18 01:21:25 +0900
