@@ -1,7 +1,7 @@
 # main links
 main:
-  - title: "블로그 방문"
-    url: https://giblesdeepmind.github.io/
+  # - title: "블로그 방문"
+  #   url: https://giblesdeepmind.github.io/
   - title: "category"
     url: https://giblesdeepmind.github.io/categories/
   # - title: "Sample Posts"

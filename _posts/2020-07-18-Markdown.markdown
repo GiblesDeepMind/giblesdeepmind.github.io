@@ -1,12 +1,15 @@
 ---
 
-title:  "Markdown연습"
-excerpt: "여기다가 마크 다운 연습을 해본다."
+title:  "Markdown"
+excerpt: "마크다운사전"
 
-layout: posts
+# layout: posts
 date:   2020-07-18 01:21:25 +0900
-categories: jekyll
-#tags: jekyll
+categories: 
+  - 마크다운
+tags: 
+  - Markdown
+  - 마크다운
 #last_modified_at: 2020-07-19T00:40:00-05:00
 
 ---
