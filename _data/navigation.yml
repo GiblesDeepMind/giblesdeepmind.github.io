@@ -2,8 +2,8 @@
 main:
   - title: "블로그 방문"
     url: https://giblesdeepmind.github.io/
-  # - title: "About"
-  #   url: https://mmistakes.github.io/minimal-mistakes/about/
+  - title: "category"
+    url: https://giblesdeepmind.github.io/categories/
   # - title: "Sample Posts"
   #   url: /year-archive/
   # - title: "Sample Collections"
