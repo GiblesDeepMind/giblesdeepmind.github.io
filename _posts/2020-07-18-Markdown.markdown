@@ -4,7 +4,7 @@ title:  "Markdown"
 excerpt: "마크다운사전"
 
 toc: true
-toc_sticky: # true
+# toc_sticky: true
 toc_label: "페이지 주요 목차"
 
 #classes: wide
