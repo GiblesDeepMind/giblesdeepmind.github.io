@@ -59,7 +59,7 @@ B씨에게는 매우 의미있는 행위이다. 왜냐하면, 세 가지 패스�
 
 다중공선성은 B씨의 분석 결과와 같이 여러 변수들이 비슷한 정보를 공유하는 현상을 말한다. 
 
-![](https://giblesdeepmind.github.io/assets/images/Statistics/Multicollinearity/diagram.jpg){: .align-center}
+![](https://giblesdeepmind.github.io/assets/images/Statistics/Multicollinearity/diagram.JPG){: .align-center}
 
 이제 다중공선성이 무엇인지 대략적인 감을 잡았을 것이다. 본격적으로 들어가기전에 다음 질문에 대해서 한번 생각해보자.
 
@@ -101,9 +101,9 @@ $-0.3 - 0.4 <\beta_1 < -0.3 + 0.4$
 
 ## 2-3. 다중공선성과 회귀 계수의 신뢰 구간
 
-**결론적으로 다중공선성은 회귀 계수의 신뢰 구간을 넓힐 수 있다.** 
+**<span style="color:red">결론적으로 다중공선성은 회귀 계수의 신뢰 구간을 넓힐 수 있다.</span>** 
 
-이것이 우리가 다중공선성에 시간을 투자해야 하는 이유이다.
+그렇기 때문에 우리는 시간을 투자하여 다중공선성을 살펴봐야 한다.
 
 
 
