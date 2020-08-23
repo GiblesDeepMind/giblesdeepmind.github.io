@@ -19,6 +19,8 @@ tags:
   - 다중공선성
 #last_modified_at: 2020-07-19T00:40:00-05:00
 
+use_math: true
+
 ---
 
 # 1. 어디로 가야하오?
@@ -57,7 +59,7 @@ B씨에게는 매우 의미있는 행위이다. 왜냐하면, 세 가지 패스�
 
 다중공선성은 B씨의 분석 결과와 같이 여러 변수들이 비슷한 정보를 공유하는 현상을 말한다. 
 
-![](https://giblesdeepmind.github.io/assets/images/Statistics/Multicollinearity/diagram.png){: .align-center}
+![](https://giblesdeepmind.github.io/assets/images/Statistics/Multicollinearity/diagram.jpg){: .align-center}
 
 이제 다중공선성이 무엇인지 대략적인 감을 잡았을 것이다. 본격적으로 들어가기전에 다음 질문에 대해서 한번 생각해보자.
 
