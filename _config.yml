@@ -12,7 +12,7 @@
 
 theme                  : "minimal-mistakes-jekyll"
 # remote_theme           : "mmistakes/minimal-mistakes"
-minimal_mistakes_skin    : "default" #"default"  "air", "aqua", "contrast", "dark", "dirt", "neon", "mint", "plum", "sunrise"
+minimal_mistakes_skin    : "air" #"default"  "air", "aqua", "contrast", "dark", "dirt", "neon", "mint", "plum", "sunrise"
 
 # Site Settings
 locale                   : "ko-KR"
@@ -20,7 +20,13 @@ title                    : "딥상어동의 딥한 생각"
 title_separator          : "-"
 subtitle                 : # site tagline that appears below site title in masthead
 name                     : "딥상어동의 딥한 생각"
-description              : "Nexon Korea Junior Data Analyst"  
+description              : "심리학 전공   
+                            
+
+                            비염때문에 입을 잘 못다물어서 딥상어동 닮음ㅠ 
+
+
+                            Nexon Korea Data Analyst"  
 url                      : "https://giblesdeepmind.github.io"
 
 baseurl                  : #"/blog"
@@ -96,7 +102,13 @@ analytics:
 author:
   name             : "딥상어동의 딥한 생각"
   avatar           : "/assets/images/testimages/mymy.jpg"
-  bio              : "Nexon Korea Junior Data Analyst"  
+  bio              : "심리학 전공  
+  
+
+                      비염때문에 입을 잘 못다물어서 딥상어동 닮음ㅠ 
+
+
+                      Nexon Korea Data Analyst"  
   location         : "유럽여행또가고싶다"
   email            :
   links:
