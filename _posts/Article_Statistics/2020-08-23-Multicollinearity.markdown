@@ -116,7 +116,7 @@ $({ X }^{ T }X)^{-1}$에 대해 생각하기전에 $X$가 다음과 같은 Matri
 
 
 
-$\begin{pmatrix} 1&1&0 \\ 0&1&1 \\ 0&0&0 \end{pmatrix}$
+$X = \begin{pmatrix} 1&1&0 \\ \\ 0&1&1 \\ \\ 0&0&0 \end{pmatrix}$
 
 
 
