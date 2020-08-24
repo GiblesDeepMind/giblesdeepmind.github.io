@@ -24,6 +24,8 @@ use_math: true
 
 ---
 
+
+
 # 1. 어디로 가야하오?
 ![](https://giblesdeepmind.github.io/assets/images/Statistics/Multicollinearity/leesin.png){: .align-center}
 
@@ -112,9 +114,9 @@ $Var[\hat{\beta_2}]=\sigma^2({ X }^{ T }X)^{-1}$
 
 $\sigma^2$는 오차항의 분산이라 MSE로 추정한다. 
 
-$({ X }^{ T }X)^{-1}$에 대해 생각하기전에 $X$가 다음과 같은 Matrix라고 가정해보자. $X=\begin{pmatrix} 1&1&0 \\ 0&1&1 \\ 0&0&0 \end{pmatrix}$
+$({ X }^{ T }X)^{-1}$에 대해 생각하기전에 $X$가 다음과 같은 Matrix라고 가정해보자. 
 
-$$X=\begin{pmatrix} 1&1&0 \\ 0&1&1 \\ 0&0&0 \end{pmatrix}$$ (1)
+$$ X=\begin{pmatrix} 1&1&0 \\ 0&1&1 \\ 0&0&0 \end{pmatrix}$$ (1)
 
 두 번재 열은 첫 번째 열과 세 번째 열의 선형 결합으로 표현된다. 이렇게 될 경우 ${ X }^{ T }X$의 역행렬이 존재하지 않게 된다. 
 
