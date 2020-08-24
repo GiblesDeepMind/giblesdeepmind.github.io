@@ -10,7 +10,7 @@ toc_label: "페이지 주요 목차"
 #classes: wide
 
 # layout: posts
-date:   2020-08-24 01:21:25 +0900
+date:   2020-08-25 01:21:25 +0900
 categories: 
   - 통계학에대한고찰
 tags: 
