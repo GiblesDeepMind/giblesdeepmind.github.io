@@ -42,12 +42,14 @@ use_math: true
 2. 반드시 해결해야하는 문제인가?
 
 ```
-본 글에서는 다중공선성에 대한 해결 방법을 다루지는 않는다.
+글 개요
+
+다중공선성에 대한 해결 방법을 다루지는 않는다.
 
 왜냐하면, VIF / 상관 / PCA / 도메인 / 종속변수와 연관성 등등 다양한 방법이 존재하고 
 실제로 해당 방법을 적용하는 과정 자체는 어렵지 않기 때문이다.
 
-따라서 본 글의 목적은 다음과 같다.
+본 글의 목적은 다음과 같다.
 1. 다중공선성이 모델에 실질적으로 어떤 영향을 미칠수 있는지에 대해 이해한다.
 2. 모델 해석 / 모델 성능 두 가지 관점에서 다중공선성을 판단해본다. 
 ```
@@ -79,18 +81,20 @@ B씨에게는 매우 의미있는 행위이다. 왜냐하면, 세 가지 패스�
 
 ![](https://giblesdeepmind.github.io/assets/images/Statistics/Multicollinearity/diagram.JPG){: .align-center}
 
+
 이제 다중공선성이 무엇인지 대략적인 감을 잡았을 것이다. 
 
 본격적으로 들어가기전에 다음 질문에 대해서 한번 생각해보자.
 
 "회귀 모델을 어떻게 신뢰할 수 있는가?" 
 
-다들 각자만의 생각이 있겠지만,
 - $R^2$가 높은게 짱이야!
 - 아니야 AIC랑 BIC가 낮아야 해
 - etc
 
-이 문제에 대해서 원초적으로 생각해보자. 
+다들 각자만의 생각이 있을 것이다.
+
+우선은 이 문제에 대해서 원초적으로 생각해보자. 
 
 회귀 분석에는 아웃풋을 도출하는 명확한 함수식이 존재한다. 그리고, 우리는 이 함수식을 통해 어떤 결론을 내리게 된다. 
 
@@ -113,9 +117,9 @@ $-0.3 - 0.4 <\beta_2 < -0.3 + 0.4$
 여기서 중요한 포인트는 두 가지 이다.
 
 * 회귀 계수의 신뢰 구간에 0이 포함된다.
-  * $\hat{\beta} 값이 0일 수 있다.$
+  * $\hat{\beta}$ 값이 0일 수 있다.
   * 즉, 변수가 유의미하지 않다.
-* 회귀 계수가 +가 될 수도 있다.
+* 회귀 계수가 양수가 될 수도 있다.
   * 해석의 방향이 반대가 될 수 있다.
 
 이처럼 신뢰 구간이 넓어지면 계수 해석 방향이 달라 질 수 있다.
@@ -147,7 +151,7 @@ $$X=\begin{pmatrix} 1&1&0 \\ 0&1&1 \\ 0&0&0 \end{pmatrix}$$
 
 이때, $({ X }^{ T }X)^{-1}$의 역행렬은 다음과 같이 계산된다.
 
-$({ X }^{ T }X)^{-1} = \frac{1}{det(A)}adj(A)$
+$({ X }^{ T }X)^{-1} = \frac{1}{det({ X }^{ T }X)}adj({ X }^{ T }X)$
 
 **여기서 $det(A)$가 0에 가까워질수록(=선형종속적인 성격을 띌수록) $({ X }^{ T }X)^{-1}$의 값이 커지게 되고 $Var[\hat{\beta_2}]$이 커지게 된다.**
 
@@ -169,7 +173,7 @@ $({ X }^{ T }X)^{-1} = \frac{1}{det(A)}adj(A)$
 
 <br>결론부터 얘기하면 예측 성능 자체에는 큰 영향을 미치지 않을 수 있다.
 
-여기서 예측 성능이란 예측값을 뜻한다. 그림을 통해 살펴보자.
+그림을 통해 살펴보자.
 
 ![](https://giblesdeepmind.github.io/assets/images/Statistics/Multicollinearity/Multi_space.JPG){: .align-center}
 > Applied Linear Statistical Models
@@ -179,7 +183,21 @@ $({ X }^{ T }X)^{-1} = \frac{1}{det(A)}adj(A)$
 
 그림에서 해집합을 표현할 수 있는 평면은 2개(그 이상일 수 있음)이지만 해집합 자체(빨간선)는 하나이다. 
 
-다시 말하자면 공선성이 발생하여 회귀 계수가 넓은 신뢰 구간을 가질 때, 하나의 값을 추정하는 여러 회귀식이 존재할 수 있다.
+다시 말하자면 공선성이 발생하여 회귀 계수가 넓은 신뢰 구간을 가질 때, 하나의 값을 추정하는 여러 회귀식이 존재할 수 있다. 
+
+따라서 회귀 계수에 대한 판단과 $\neq$ 예측 값에 판단은 따로 생각할 필요가 있다.
+
+물론, 예측값에도 신뢰 구간이 존재하며 $({ X }^{ T }X)^{-1}$ 값이 예측값의 신뢰 구간을 구할 때도 사용된다. 
+
+그럼에도 불구하고 예측값의 신뢰 구간은 예측 성능을 중요시하는 머신러닝의 관점에서는 크게 중요하지 않을 수 있다.
+
+왜냐하면, 머신러닝에서는 각 개별 점들 보다는 전체 예측값과 실제값 간의 차이 합을 중요하게 생각하기 때문이다.
+
+결론적으로 RMSE와 같이 모델 성능을 판단할 수 있는 종합 지표 값이 만족스러우면 장땡이라고 할 수 있다.
+
+![](https://giblesdeepmind.github.io/assets/images/Statistics/Multicollinearity/110646_40943_3846.JPG){: .align-center}
+
+그렇기 때문에 예측의 입장에서는 다중공선성은 중요한 문제가 아닐 수 있다.
 
 ### 정말 예측 성능에는 영향을 미치지 않을까?
 
@@ -187,30 +205,31 @@ $({ X }^{ T }X)^{-1} = \frac{1}{det(A)}adj(A)$
 
 ML 모델에서 데이터는 크게 훈련/테스트 셋으로 나누어진다.
 
-만약, 데이터 수가 너무 적어 훈련 셋과 테스트 셋 간에 공분산 구조가 다르다면 다중공선성은 또 다른 문제를 야기할 수 있을 것이다.
+만약, 데이터 수가 너무 적어 훈련셋과 테스트 셋간에 공분산 구조가 다르다면 다중공선성은 또 다른 문제를 야기할 수 있을 것이다.
 
 ```
 공분산 구조가 다르다는 것은 다음의 의미이다. 
 예를 들어, 샘플 수가 13개 밖에 안되고 
 이 중 4명은 남자 9명은 여자인 데이터 셋을 가정해보자. 
-이때, 훈련 셋과 테스트 셋으로 데이터를 분할할 경우 
-테스트 셋에 모든 남자가 포함될 수도 있다.
+이때, 훈련셋과 테스트셋으로 데이터를 분할할 경우 
+테스트셋에 모든 남자가 포함될 수도 있다.
 
 이럴 경우 모델이 여자에 대한 정보만 학습하고 
 추론은 남자에 대한 정보를 바탕으로 하게되는 상황이 발생할 수 있다.
 
-즉, 훈련 셋에서 반영된 변수 간 다중공선성 정도와 
-테스트 셋에서 반영될 다중공선성 정도가 다를 수 있다.
+즉, 훈련셋에서 반영된 변수 간 다중공선성 정도와 
+테스트셋에서 반영될 다중공선성 정도가 다를 수 있다.
 
 그리고 이와 같은 차이는 
-훈련 셋과 테스트 셋 간 공분산 구조가 다를 경우 발생할 수 있다.
+훈련셋과 테스트셋 간 공분산 구조가 다를 경우 발생할 수 있다.
 (훈련 셋에는 여자만, 테스트 셋에는 남자만 존재)
 ```
 
 결론적으로 훈련 셋과 테스트 셋 간 공분산 구조에 큰 차이가 없을 경우
->(훈련 셋에서 발생하는 다중공선성과 테스트 셋에서 발생하는 다중 공선성에 큰 차이가 없는 경우) 
+>(훈련셋에서 발생하는 다중공선성과 테스트 셋에서 발생하는 다중공선성에 큰 차이가 없는 경우) 
 
 다중공선성은 모델의 예측 능력에 큰 영향을 미치지 않을 수 있다.
+> 테스트셋에 대해서도
 
 ### 사례. 다중공선성을 지닌 데이터를 의사결정나무에 적용하는 경우
 
@@ -242,7 +261,7 @@ $-0.3 - 0.4 <\beta_2 < -0.3 + 0.4$
 
 모델을 보고 만족한 무리뉴는 분석가에게 `약팀이랑 붙었던 경기는 빼고 다시 결과를 말해줘`라고 부탁했다. 
 
-그랬더니, $Y= 0.8X_1 + 0.2X_2 + 0.3$ 와 같은 모델이 나왔다. 
+그랬더니, $Y= 0.2X_1 + 0.2X_2 + 0.3$ 와 같은 모델이 나왔다. 
 
 이때, 당신은 분석가에게 뭐라고 할 것인가?
 
@@ -315,6 +334,7 @@ $Y =\hat{\beta_0} +\hat{\beta_1}X + \hat{\beta_2}Z + \hat{\beta_3}XZ + \varepsil
 * [Is multicollinearity really a problem?](https://stats.stackexchange.com/questions/268966/is-multicollinearity-really-a-problem)
 * [Linear Models: How does multicollinearity affect prediction accuracy?](https://www.quora.com/Linear-Models-How-does-multicollinearity-affect-prediction-accuracy)
 * [Multicollinearity and predictive performance](https://stats.stackexchange.com/questions/361247/multicollinearity-and-predictive-performance)
+* [Why is multicollinearity not checked in modern statistics/machine learning](https://stats.stackexchange.com/questions/168622/why-is-multicollinearity-not-checked-in-modern-statistics-machine-learning)
 * Kutner, M. H., Nachtsheim, C. J., Neter, J., & Li, W. (2005). Applied linear statistical models (Vol. 5). New York: McGraw-Hill Irwin.
 * Piramuthu, S. (2008). Input data for decision trees. Expert Systems with applications, 34(2), 1220-1226.
 * Brambor, T., Clark, W. R., & Golder, M. (2006). Understanding interaction models: Improving empirical analyses. Political analysis, 63-82.
