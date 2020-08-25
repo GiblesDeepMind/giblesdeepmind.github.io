@@ -195,7 +195,7 @@ $({ X }^{ T }X)^{-1} = \frac{1}{det({ X }^{ T }X)}adj({ X }^{ T }X)$
 
 결론적으로 RMSE와 같이 모델 성능을 판단할 수 있는 종합 지표 값이 만족스러우면 장땡이라고 할 수 있다.
 
-![](https://giblesdeepmind.github.io/assets/images/Statistics/Multicollinearity/110646_40943_3846.JPG){: .align-center}
+![](https://giblesdeepmind.github.io/assets/images/Statistics/Multicollinearity/jang.JPG){: .align-center}
 
 그렇기 때문에 예측의 입장에서는 다중공선성은 중요한 문제가 아닐 수 있다.
 
