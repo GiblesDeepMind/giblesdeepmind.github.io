@@ -79,7 +79,7 @@ B씨에게는 매우 의미있는 행위이다. 왜냐하면, 세 가지 패스�
 
 회귀 분석에는 아웃풋을 도출하는 명확한 함수식이 존재한다. 그리고, 우리는 이 함수식을 통해 어떤 결론을 내리게 된다. 
 
-아래와 같은 모델을 가정해보자.
+아래와 같은 가상의 모델을 가정해보자.
 
 $Y= 0.7X_1 + -0.3X_2$
 
@@ -97,8 +97,11 @@ $-0.3 - 0.4 <\beta_2 < -0.3 + 0.4$
 
 여기서 중요한 포인트는 두 가지 이다.
 
-1. 회귀 계수의 신뢰 구간에 0이 포함된다.
-2. 회귀 계수가 +가 될 수도 있다.
+* 회귀 계수의 신뢰 구간에 0이 포함된다.
+  * $\hat{\beta} 값이 0일 수 있다.$
+  * 즉, 변수가 유의미하지 않다.
+* 회귀 계수가 +가 될 수도 있다.
+  * 해석의 방향이 반대가 될 수 있다.
 
 이처럼 신뢰 구간이 넓어지면 계수 해석 방향이 달라 질 수 있다.
 
@@ -179,7 +182,7 @@ ML 모델에서 데이터는 크게 훈련/테스트 셋으로 나누어진다.
 
 다중공선성은 모델의 예측 능력에 큰 영향을 미치지 않을 수 있다.
 
-### 사례1. 다중공선성을 지닌 데이터를 의사결정나무에 적용하는 경우
+### 사례. 다중공선성을 지닌 데이터를 의사결정나무에 적용하는 경우
 
 Piramuthu(2008)는 데이터에 아웃라이어가 존재하는 경우 / 이상치가 존재하는 경우 / 다중공선성이 있는 경우 등으로 조건을 나누어 의사결정나무에 어떤 영향을 미치는지를 확인하는 시뮬레이션 연구 결과를 진행했다.
 
@@ -193,13 +196,27 @@ Piramuthu(2008)는 데이터에 아웃라이어가 존재하는 경우 / 이상�
 
 * 모델 성능 향상이 목적인 경우 두었을 때 다중공선성 만으로 변수를 제거하면 오히려 성능이 떨어질 수도 있다. 
 
+## 3-2. 다중공선성은 모델 해석에 어떤 영향을 미치는가?
+
+2-2에서 살펴봤듯이 다중공선성이 발생하면 회귀 계수의 신뢰 구간이 넓어진다. 같은 사례로 이 내용을 한번 더 복기해보자. 
+
+$Y= 0.7X_1 + -0.3X_2$
+
+- Y : 실점 횟수
+- $X_1$ : 스트레스
+- $X_2$ : 수비훈련기간
+
+$-0.3 - 0.4 <\beta_2 < -0.3 + 0.4$
+
+
+
 # Reference
 * [Collinearity](https://genomicsclass.github.io/book/pages/collinearity.html)
 * [Multicollinearity: Why does highly correlated columns in the design matrix lead to high variance of the regression coefficient?](https://math.stackexchange.com/questions/1178431/multicollinearity-why-does-highly-correlated-columns-in-the-design-matrix-lead)
 * [Why do we use the term multicollinearity, when the vectors representing two variables are never truly collinear?](https://stats.stackexchange.com/questions/128735/why-do-we-use-the-term-multicollinearity-when-the-vectors-representing-two-vari)
 * [Lecture 17: Multicollinearity](http://www.stat.cmu.edu/~larry/=stat401/lecture-17.pdf)
-* Kutner, M. H., Nachtsheim, C. J., Neter, J., & Li, W. (2005). Applied linear statistical models (Vol. 5). New York: McGraw-Hill Irwin.
 * [Is multicollinearity really a problem?](https://stats.stackexchange.com/questions/268966/is-multicollinearity-really-a-problem)
 * [Linear Models: How does multicollinearity affect prediction accuracy?](https://www.quora.com/Linear-Models-How-does-multicollinearity-affect-prediction-accuracy)
 * [Multicollinearity and predictive performance](https://stats.stackexchange.com/questions/361247/multicollinearity-and-predictive-performance)
+* Kutner, M. H., Nachtsheim, C. J., Neter, J., & Li, W. (2005). Applied linear statistical models (Vol. 5). New York: McGraw-Hill Irwin.
 * Piramuthu, S. (2008). Input data for decision trees. Expert Systems with applications, 34(2), 1220-1226.
