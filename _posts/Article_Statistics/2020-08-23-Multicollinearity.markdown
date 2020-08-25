@@ -10,7 +10,7 @@ toc_label: "페이지 주요 목차"
 #classes: wide
 
 # layout: posts
-use_math: true
+
 date:   2020-08-24 01:21:25 +0900
 categories: 
   - 통계학에대한고찰
@@ -21,7 +21,9 @@ tags:
   - 회귀분석 다중공선성
 #last_modified_at: 2020-07-19T00:40:00-05:00
 
-star: true # 포스팅 마크다운 상단 최상단에 표시
+# 포스팅 마크다운 상단 최상단에 표시
+star: true 
+use_math: true
 
 ---
 

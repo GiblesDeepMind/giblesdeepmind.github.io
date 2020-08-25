@@ -17,8 +17,11 @@ tags:
   - Markdown
   - 마크다운
 #last_modified_at: 2020-07-19T00:40:00-05:00
+use_math: true
 
 ---
+
+$\beta$
 
 ## 텍스트 줄바꿈
 기본적인 텍스트 표기 방식이다.  
