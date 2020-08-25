@@ -193,7 +193,7 @@ $({ X }^{ T }X)^{-1} = \frac{1}{det({ X }^{ T }X)}adj({ X }^{ T }X)$
 
 왜냐하면, 머신러닝에서는 각 개별 점들 보다는 전체 예측값과 실제값 간의 차이 합을 중요하게 생각하기 때문이다.
 
-결론적으로 RMSE와 같이 모델 성능을 판단할 수 있는 종합 지표 값이 만족스러우면 장땡이라고 할 수 있다.
+결론적으로 RMSE와 같이 모델 성능을 판단할 수 있는 종합 지표 값이 만족스러운 것이 중요하다고 할 수 있다.
 
 ![](https://giblesdeepmind.github.io/assets/images/Statistics/Multicollinearity/jang.JPG){: .align-center}
 
