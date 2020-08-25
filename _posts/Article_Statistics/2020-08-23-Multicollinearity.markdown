@@ -1,6 +1,6 @@
 ---
 
-title:  "다중공선성에 대한 고찰"
+title:  "[다중공선성] 살면서 한번쯤은 마주하는 다중공선성"
 excerpt: "다중공선성"
 
 toc: true
@@ -13,7 +13,7 @@ toc_label: "페이지 주요 목차"
 
 date:   2020-08-24 01:21:25 +0900
 categories: 
-  - 통계학에대한고찰
+  - Statistics
 tags: 
   - Multicollinearity
   - 다중공선성
