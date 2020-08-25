@@ -116,7 +116,7 @@ $\sigma^2$는 오차항의 분산이라 MSE로 추정한다.
 
 $({ X }^{ T }X)^{-1}$에 대해 생각하기전에 $X$가 다음과 같은 Matrix라고 가정해보자. 
 
-<div>$$X=\begin{pmatrix} 1&1&0 \\ 0&1&1 \\ 0&0&0 \end{pmatrix}$$</div>
+$$X=\begin{pmatrix} 1&1&0 \\ 0&1&1 \\ 0&0&0 \end{pmatrix}$$
 
 두 번재 열은 첫 번째 열과 세 번째 열의 선형 결합으로 표현된다. 이렇게 될 경우 ${ X }^{ T }X$의 역행렬이 존재하지 않게 된다. 
 
@@ -152,14 +152,14 @@ $({ X }^{ T }X)^{-1} = \frac{1}{det(A)}adj(A)$
 여기서 예측 성능이란 예측값을 뜻한다. 그림을 통해 살펴보자.
 
 ![](https://giblesdeepmind.github.io/assets/images/Statistics/Multicollinearity/Multi_space.JPG){: .align-center}
-> Applied Linear Statistical Models 5판
+> Applied Linear Statistical Models
 >> 다중공선성이 존재할 때 해 공간 예시
 
 상단의 식 $X_2 = 5 + .5X_1$은 $X_2$과 $X_1$의 상관이 높다는 것을 의미한다.
 
 그림에서 해집합을 표현할 수 있는 평면은 2개(그 이상일 수 있음)이지만 해집합 자체(빨간선)는 하나이다. 
 
-다시 말하자면 공선성이 발생하여 회귀 계수가 넓은 신뢰 구간을 가질 때, 하나의 값을 추정할 수 있는 여러 회귀식이 존재할 수 있다.
+다시 말하자면 공선성이 발생하여 회귀 계수가 넓은 신뢰 구간을 가질 때, 하나의 값을 추정하는 여러 회귀식이 존재할 수 있다.
 
 ### 정말 예측 성능에는 영향을 미치지 않을까?
 
@@ -174,9 +174,24 @@ ML 모델에서 데이터는 크게 훈련/테스트 셋으로 나누어진다.
 >>>즉, 훈련 셋에서 반영된 변수 간 다중공선성 정도와 테스트 셋에서 반영될 다중공선성 정도가 다를 수 있다.
 >>>> 그리고 이와 같은 차이는 훈련 셋과 테스트 셋 간 공분산 구조가 다를 경우 발생할 수 있다.
 
-결론적으로 훈련 셋과 테스트 셋 간 공분산 구조에 큰 차이가 없을 경우 다중공선성은 모델의 예측 능력에 큰 영향을 미치지 않을 수 있다.
+결론적으로 훈련 셋과 테스트 셋 간 공분산 구조에 큰 차이가 없을 경우
+>(훈련 셋에서 발생하는 다중공선성과 테스트 셋에서 발생하는 다중 공선성에 큰 차이가 없는 경우) 
 
-왜냐하면, 다중공선성으로 인해 회귀 계수의 신뢰 구간은 영향을 받아 여러 회귀식이 발생할 수 있지만 각 회귀식들이 예측하는 추정값은 
+다중공선성은 모델의 예측 능력에 큰 영향을 미치지 않을 수 있다.
+
+### 사례1. 다중공선성을 지닌 데이터를 의사결정나무에 적용하는 경우
+
+Piramuthu(2008)는 데이터에 아웃라이어가 존재하는 경우 / 이상치가 존재하는 경우 / 다중공선성이 있는 경우 등으로 조건을 나누어 의사결정나무에 어떤 영향을 미치는지를 확인하는 시뮬레이션 연구 결과를 진행했다.
+
+시뮬레이션 결과 다중공선성이 있는 변수를 제거했을 때 오히려 모델 성능이 하락한 것을 확인할 수 있다.
+
+![](https://giblesdeepmind.github.io/assets/images/Statistics/Multicollinearity/prediction_error_tree.JPG){: .align-center}
+
+> 다른 변수들과 상관이 있는 $x_4$를 제거했을 때 예측 오류가 더 높아짐
+
+물론, 위 사례를 모든 경우에 일반화 할 수는 없다. 하지만, 다음의 사실을 시사하기에는 충분한 사례라고 생각한다.
+
+* 모델 성능 향상이 목적인 경우 두었을 때 다중공선성 만으로 변수를 제거하면 오히려 성능이 떨어질 수도 있다. 
 
 # Reference
 * [Collinearity](https://genomicsclass.github.io/book/pages/collinearity.html)
@@ -187,3 +202,4 @@ ML 모델에서 데이터는 크게 훈련/테스트 셋으로 나누어진다.
 * [Is multicollinearity really a problem?](https://stats.stackexchange.com/questions/268966/is-multicollinearity-really-a-problem)
 * [Linear Models: How does multicollinearity affect prediction accuracy?](https://www.quora.com/Linear-Models-How-does-multicollinearity-affect-prediction-accuracy)
 * [Multicollinearity and predictive performance](https://stats.stackexchange.com/questions/361247/multicollinearity-and-predictive-performance)
+* Piramuthu, S. (2008). Input data for decision trees. Expert Systems with applications, 34(2), 1220-1226.
