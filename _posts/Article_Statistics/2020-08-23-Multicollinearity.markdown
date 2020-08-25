@@ -10,7 +10,8 @@ toc_label: "페이지 주요 목차"
 #classes: wide
 
 # layout: posts
-date:   2020-08-25 01:21:25 +0900
+use_math: true
+date:   2020-08-24 01:21:25 +0900
 categories: 
   - 통계학에대한고찰
 tags: 
@@ -21,7 +22,6 @@ tags:
 #last_modified_at: 2020-07-19T00:40:00-05:00
 
 star: true # 포스팅 마크다운 상단 최상단에 표시
-use_math: true
 
 ---
 
